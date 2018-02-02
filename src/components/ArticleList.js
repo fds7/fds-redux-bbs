@@ -4,11 +4,6 @@ import { List } from 'semantic-ui-react';
 export default class ArticleList extends Component {
   static defaultProps = {
     articles: [],
-    onMount: () => {},
-  }
-
-  componentDidMount() {
-    this.props.onMount();
   }
 
   render() {
