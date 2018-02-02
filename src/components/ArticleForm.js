@@ -6,6 +6,7 @@ export default class ArticleForm extends Component {
   static defaultProps = {
     errorMessage: '',
     onSubmit: () => {},
+    creating: false,
   }
 
   state = {
@@ -25,9 +26,9 @@ export default class ArticleForm extends Component {
 
   render() {
     const { title, content } = this.state;
-    const { errorMessage } = this.props;
+    const { errorMessage, creating } = this.props;
     return (
-      <Form as="div">
+      <Form as="div" loading={creating}>
         <Form.Input name="title" value={title} label="제목" onChange={this.handleChange} />
         <Form.TextArea name="content" value={content} label="내용" onChange={this.handleChange} />
         <Form.Button onClick={this.handleSubmit}>전송</Form.Button>
