@@ -8,12 +8,12 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 const config = {
-  apiKey: 'AIzaSyC5bvpoKyfa3qwTxhSt0PxgQZI2dI3QbZc',
-  authDomain: 'fds-cra.firebaseapp.com',
-  databaseURL: 'https://fds-cra.firebaseio.com',
-  projectId: 'fds-cra',
-  storageBucket: 'fds-cra.appspot.com',
-  messagingSenderId: '966283711333',
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
 };
 firebase.initializeApp(config);
 
